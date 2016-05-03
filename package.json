@@ -1,7 +1,7 @@
 {
   "name": "launchpad-marquee",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.3",
+  "description": "Use your Novation Launchpad as a scrolling marquee",
   "main": "index.js",
   "dependencies": {
     "launchpadder": "0.0.5",

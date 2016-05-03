@@ -124,9 +124,9 @@ function marquee (text, render) {
   const marqueeRows = [ [], [], [], [], [], [], [], [] ]
 
   const marqueeOutput = text.split('').map(i => getCharacter(i)).reduce((output, char) => {
-    output.forEach((list, index) =>
+    output.forEach((list, index) => {
       output[index] = list.concat(char[index]).concat([padding])
-    )
+    })
     return output
   }, marqueeRows)
 

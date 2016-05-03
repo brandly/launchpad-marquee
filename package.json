@@ -12,6 +12,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "midi",
+    "controller",
+    "marquee",
+    "novation",
+    "launchpad",
+    "scrolling",
+    "text"
+  ],
   "bin": {
     "launchpad-marquee": "cli.js"
   },

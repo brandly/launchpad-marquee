@@ -6,10 +6,7 @@ const launchpadMarquee = require('./')
 
 const cli = meow(`
   Usage
-    $ foo <input>
-
-  Options
-    -r, --rainbow  Include a rainbow
+    $ launchpad-marquee <input>
 
   Examples
     $ launchpad-marquee "9876543210"

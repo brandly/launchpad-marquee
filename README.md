@@ -2,6 +2,8 @@
 
 > Use your Novation Launchpad as a scrolling marquee
 
+![what up](http://i.imgur.com/0odhcgU.gif)
+
 ## install
 
 ```shell

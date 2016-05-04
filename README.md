@@ -2,7 +2,7 @@
 
 > Use your Novation Launchpad as a scrolling marquee
 
-![what up](http://i.imgur.com/0odhcgU.gif)
+![what up](https://cloud.githubusercontent.com/assets/820696/15025599/fbf12e38-1207-11e6-80f3-65f9a03fe4f4.gif)
 
 ## install
 
@@ -13,5 +13,5 @@ $ npm install --global launchpad-marquee
 ## usage
 
 ```shell
-$ launchpad-marquee '08439 543983 38493'
+$ launchpad-marquee --help
 ```

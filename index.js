@@ -29,8 +29,8 @@ if (port === null) {
 const pad = new Launchpad(port)
 const color = launchpadder.Color.RED
 
-module.exports = function launchpadMarquee (text) {
-  return marquee(text, (marquee) => {
+module.exports = function launchpadMarquee (params) {
+  return marquee(params, (marquee) => {
     marquee.forEach((row, y) => {
       row.forEach((light, x) => {
         const button = pad.getButton(x, y)

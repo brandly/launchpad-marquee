@@ -6,8 +6,9 @@ function getCharacter (char) {
   return chars[char] || chars[' ']
 }
 
-function marquee (text, render) {
-  text = '  ' + text
+function marquee (params, render) {
+  const text = '  ' + params.text
+  const interval = params.interval || 67
 
   const padding = [0]
   const marqueeRows = [ [], [], [], [], [], [], [], [] ]
@@ -27,7 +28,7 @@ function marquee (text, render) {
     render(marqueeOutput.map((row) => row.slice(index, index + displayWidth)))
 
     index = (index + 1) % marqueeWidth
-  }, 67)
+  }, interval)
 
   return function stopMarquee () {
     global.clearInterval(marqueeInterval)

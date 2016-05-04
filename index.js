@@ -30,7 +30,7 @@ const pad = new Launchpad(port)
 const color = launchpadder.Color.RED
 
 module.exports = function launchpadMarquee (text) {
-  return marquee(' ' + text, (marquee) => {
+  return marquee(text, (marquee) => {
     marquee.forEach((row, y) => {
       row.forEach((light, x) => {
         const button = pad.getButton(x, y)

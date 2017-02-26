@@ -38,7 +38,7 @@ module.exports = function launchpadMarquee (params) {
   }
 
   const pad = new Launchpad(port)
-  const color = getColorWithDefault(params.color)
+  const color = getColorWithDefault(params.color || '')
 
   return marquee(params, (marquee) => {
     marquee.forEach((row, y) => {

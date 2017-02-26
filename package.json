@@ -6,7 +6,7 @@
   "dependencies": {
     "launchpadder": "0.0.5",
     "meow": "3.7.0",
-    "midi": "0.9.4"
+    "midi": "0.9.5"
   },
   "devDependencies": {
     "standard": "7.0.0"

@@ -13,23 +13,33 @@ function findLaunchpadPort (input) {
   return null
 }
 
-const input = new MidiInput()
-const midiInputCount = input.getPortCount()
+function getColorWithDefault (color) {
+  color = color.toUpperCase()
 
-if (!midiInputCount) {
-  throw new Error('Unable to find MIDI input port')
+  if (launchpadder.Color.hasOwnProperty(color)) {
+    return launchpadder.Color[color]
+  }
+
+  return launchpadder.Color.RED
 }
-
-const port = findLaunchpadPort(input)
-
-if (port === null) {
-  throw new Error('Unable to find Launchpad S')
-}
-
-const pad = new Launchpad(port)
-const color = launchpadder.Color.RED
 
 module.exports = function launchpadMarquee (params) {
+  const input = new MidiInput()
+  const midiInputCount = input.getPortCount()
+
+  if (!midiInputCount) {
+    throw new Error('Unable to find MIDI input port')
+  }
+
+  const port = findLaunchpadPort(input)
+
+  if (port === null) {
+    throw new Error('Unable to find Launchpad S')
+  }
+
+  const pad = new Launchpad(port)
+  const color = getColorWithDefault(params.color)
+
   return marquee(params, (marquee) => {
     marquee.forEach((row, y) => {
       row.forEach((light, x) => {

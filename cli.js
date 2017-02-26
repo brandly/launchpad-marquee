@@ -11,12 +11,15 @@ const cli = meow(`
 
   Options
     -i, --interval Set the scrolling interval
+    --color Set the output color
 
   Examples
     $ launchpad-marquee "9876543210"
+    $ launchpad-marquee --color green "ableton"
 `)
 
 launchpadMarquee({
   text: cli.input[0],
-  interval: cli.flags.i || cli.flags.interval
+  interval: cli.flags.i || cli.flags.interval,
+  color: cli.flags.color
 })
